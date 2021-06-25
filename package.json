@@ -1,0 +1,36 @@
+{
+  "name": "ghost-v4-on-heroku",
+  "version": "4.2.2",
+  "description": "Deploy latest ghost v4 on Heroku",
+  "main": "nehakumarisaa.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nehakumarisaa/nehaghost.git"
+  },
+  "keywords": [
+    "ghost",
+    "ghost v4",
+    "heroku"
+  ],
+  "author": "nehakumarisaa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nehakumarisaa/nehaghost/issues"
+  },
+  "homepage": "https://github.com/nehakumarisaa/nehaghost#readme",
+  "engines": {
+    "node": "12.X"
+  },
+  "dependencies": {
+    "casper": "github:TryGhost/Casper#main",
+    "ghost": "^4.6.4",
+    "ghost-storage-adapter-s3": "^2.8.0",
+    "ghost-storage-cloudinary": "^2.1.5",
+    "lyra": "github:TryGhost/lyra#master",
+    "mysql": "^2.18.1"
+  },
+  "scripts": {
+    "start": "node nehakumarisaa.js",
+    "postinstall": "bash bin/cloudinary.sh && bash bin/aws-s3.sh && bash bin/themes.sh"
+  }
+}
