@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{@site.lang}}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+    <title>{{meta_title}}</title>
+    <link href="{{asset 'css/style.min.css'}}" rel="stylesheet" type="text/css">
+    <link href="{{asset 'favicon.ico'}}" rel="shortcut icon">
+    {{ghost_head}}
+    <meta name="theme" content="Saga v2.1.3">
+</head>
+<body class="{{#is "index"}}index {{/is}}{{body_class}}">
+    <a href="#main" class="skip-link">{{t "Skip to main content"}}</a>
+    {{{body}}}
+
+    <footer role="contentinfo" class="footer animated hidden@print fadeIn" id="footer">
+        {{> footer}}
+    </footer>
+    <script type="text/javascript" src="{{asset 'js/Saga.js'}}"></script>
+    {{ghost_foot}}
+</body>
+</html>
