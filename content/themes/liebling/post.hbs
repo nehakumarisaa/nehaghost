@@ -30,8 +30,16 @@ into the {body} of the default.hbs template --}}
   {{/post}}
   
   <article>
+    <section class="post-full-content">
+        <aside class="toc-container">
+            <div class="toc"></div>
+        </aside>
+        <div class="post-content">
+            {{content}}
+        </div>
+    </section>
     <div class="l-content in-post">
-      <div class="js-toc"></div>
+      <aside class="js-toc"></aside>
       {{!-- Everything inside the #post tags pulls data from the post --}}
       {{#post}}
         <div class="l-wrapper in-post {{#unless feature_image}}no-image{{/unless}} js-aos-wrapper" data-aos="fade-up"

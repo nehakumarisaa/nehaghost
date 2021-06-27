@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     {{!-- Preload assets --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.css">
     <link rel="preload" href="{{asset "css/app.css"}}" as="style" />
     <link rel="preload" href="{{asset "js/manifest.js"}}" as="script" />
     <link rel="preload" href="{{asset "js/vendor/content-api.min.js"}}" as="script" />
@@ -113,6 +114,14 @@
     <script defer src="{{asset "js/app.js"}}"></script>
 
     {{!-- The #block helper will pull in data from the #contentFor other template files --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+    <script>
+        tocbot.init({
+            tocSelector: '.toc',
+            contentSelector: '.post-content',
+            hasInnerContainers: true
+        });
+    </script>
     {{{block "scripts"}}}
 
     {{!-- Ghost outputs important scripts and data with this tag --}}
